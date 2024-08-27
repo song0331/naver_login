@@ -1,0 +1,101 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sr_only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0px;
+  clip: rect(0, 0, 0, 0);
+}
+
+fieldset {
+  border: none;
+}
+
+.login_container {
+  position: absolute;
+  user-select: none;
+  width: 350px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login_title {
+  text-align: center;
+}
+
+#user_id,
+#user_pw {
+  width: calc(100% - 15px);
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.562);
+  font-family: inherit;
+}
+
+.login_btn {
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+  border: none;
+  background-color: #09AA5C;
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: 16px;
+  transition: all 0.3s;
+  margin-top: 40px;
+  font-family: inherit;
+  line-height: 43px;
+}
+
+.login_btn:hover {
+  background-color: #0bc46a;
+}
+.login_btn:focus {
+  outline: none;
+  background-color: #0bc46a;
+}
+
+.login_maintain_label {
+  cursor: pointer;
+  font-size: 13px;
+  color: gray;
+  margin-left: 5px;
+  font-family: inherit;
+}
+
+#login_maintain+label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../icons/unCheck.svg');
+  background-size: cover;
+  margin-right: 7px;
+  vertical-align: -5px;
+  border: 1px solid white;
+}
+
+#login_maintain:checked+label::before {
+  /* 
+    background로 이미지를 변경하면 위에 적용한 background 속성이 다 사라지기 때문에
+    background-image로 이미지만 변경해주어야 한다.
+  */
+  background-image: url('../icons/Check.svg');
+}
+
+#login_maintain:focus+label:before {
+  border: 1px solid black;
+  border-radius: 5px;
+}
