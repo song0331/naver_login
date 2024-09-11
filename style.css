@@ -30,17 +30,31 @@ fieldset {
   text-align: center;
 }
 
+.user_id, .user_pw{
+  margin-bottom: 10px;
+}
+
 #user_id,
 #user_pw {
   width: calc(100% - 15px);
   height: 50px;
   border-radius: 20px;
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   padding-left: 15px;
   border: 1px solid rgba(0, 0, 0, 0.562);
   font-family: inherit;
+}
+
+.error_message {
+  display: none;
+  color: red;
+  font-size: 10px;
+  margin: 0 0 10px 10px;
+}
+
+.show{
+  display: block;
 }
 
 .login_btn {
@@ -80,7 +94,7 @@ fieldset {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: url('../icons/unCheck.svg');
+  background: url('../images/unCheck.svg');
   background-size: cover;
   margin-right: 7px;
   vertical-align: -5px;
@@ -92,7 +106,7 @@ fieldset {
     background로 이미지를 변경하면 위에 적용한 background 속성이 다 사라지기 때문에
     background-image로 이미지만 변경해주어야 한다.
   */
-  background-image: url('../icons/Check.svg');
+  background-image: url('../images/Check.svg');
 }
 
 #login_maintain:focus+label:before {

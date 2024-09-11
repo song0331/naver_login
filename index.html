@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap"
     rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="main.js" defer></script>
   <link rel="stylesheet" href="style.css">
-  <title>네이버 : 로그인</title>
+  <title>form</title>
 </head>
 
 <body>
@@ -21,14 +23,16 @@
     <fieldset>
       <legend class="sr_only">로그인</legend>
 
-      <div class="user_pw">
+      <div class="user_id">
         <label for="user_id" class="sr_only">아이디</label>
-        <input type="text" id="user_id" name="user_id" placeholder="아이디 입력" />
+        <input type="email" id="user_id" name="user_id" placeholder="아이디 입력" />
+        <span class="error_message" id="userEmailError">아이디는 이메일 형식으로 입력해 주세요.</span>
       </div>
 
       <div class="user_pw">
         <label for="user_pw" class="sr_only">비밀번호</label>
         <input type="password" id="user_pw" name="user_pw" placeholder="비밀번호 입력" />
+        <span class="error_message" id="userPasswordError">비밀번호는 숫자, 문자, 특수문자를 조합해서 6자리 이상</span>
       </div>
 
       <div>
